@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pauline Kucharew - Front-end Developer</title>
+
+    <!-- Libs -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/lib/CLDRPluralRuleParser/src/CLDRPluralRuleParser.js"></script>
+
+    <!-- Source -->
+    <script src="js/lib/jquery.i18n/jquery.i18n.js"></script>
+    <script src="js/lib/jquery.i18n/jquery.i18n.messagestore.js"></script>
+    <script src="js/lib/jquery.i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="js/lib/jquery.i18n/jquery.i18n.parser.js"></script>
+    <script src="js/lib/jquery.i18n/jquery.i18n.emitter.js"></script>
+    <script src="js/lib/jquery.i18n/jquery.i18n.language.js"></script>
+    <script src="js/global.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:wght@200;400;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=PT+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
+      integrity="sha512-QKC1UZ/ZHNgFzVKSAhV5v5j73eeL9EEN289eKAEFaAjgAiobVAnVv/AGuPbXsKl1dNoel3kNr6PYnSiTzVVBCw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TFQT0DVN3C"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-TFQT0DVN3C");
+    </script>
+  </head>
+  <body>
+    <header class="header fade-in-down">
+      <nav class="mono">
+        <div class="logo"><a href="#">Pauline Kucharew</a><br /></div>
+        <ol class="menu">
+          <li>
+            <a href="#projects" data-i18n="menuProjects"> Projects </a>
+          </li>
+          <li>
+            <a href="#experience" data-i18n="menuExperience"> Experience </a>
+          </li>
+          <li>
+            <a href="#about" data-i18n="menuAbout"> About </a>
+          </li>
+          <li>
+            <a href="#contact" data-i18n="menuContact"> Contact </a>
+          </li>
+        </ol>
+        <div class="resume" data-i18n="[html]menuResume">
+          <a
+            href="src/pauline_kucharew_resume_eng_2022.pdf"
+            target="_blank"
+            class="button"
+          >
+            <i class="icon-docs icons"></i>
+            Resume
+          </a>
+        </div>
+        <div class="resume small" data-i18n="[html]menuCV">
+          <a
+            href="src/pauline_kucharew_resume_eng_2022.pdf"
+            target="_blank"
+            class="button"
+          >
+            <i class="icon-docs icons"></i>
+            CV
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="sidebar fade-in-up">
+      <ul class="social-menu">
+        <li>
+          <a href="https://www.linkedin.com/in/pkucharew/" target="_blank"
+            ><i class="icon-social-linkedin icons"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/PKucharew" target="_blank"
+            ><i class="icon-social-twitter icons"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/paeli_/" target="_blank"
+            ><i class="icon-social-instagram icons"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <main>
+      <div class="split-bg">
+        <a href="#" class="scroll-down"
+          ><i class="icon-arrow-down icons"></i>Scroll</a
+        >
+        <a href="#" class="back-to-top"
+          ><i class="icon-arrow-up icons"></i>Back to Top</a
+        >
+
+        <section class="container">
+          <div id="hero" class="hero">
+            <span class="greeting" data-i18n="greeting"
+              >Hello, my name is <strong>Pauline!</strong> &#128075;</span
+            >
+
+            <h1 data-i18n="heroTitle">
+              Front-end Developer <br />& UI/UX Specialist
+            </h1>
+
+            <p data-i18n="heroIntro">
+              I'm front-end developer with an eye for design, specialized in
+              building exceptional digital experiences. I'm currently looking
+              for new projects to contribute to.
+            </p>
+
+            <a
+              href="mailto:pauline@kucharew.dev"
+              class="button contact"
+              data-i18n="[html]contactBtn"
+              >Contact me</a
+            >
+
+            <div class="language-toggle">
+              <a href="SwitchToEng" lang="en" class="switch en" data-locale="en"
+                >English</a
+              >
+              <a href="CambiaAEsp" lang="es" class="switch es" data-locale="es"
+                >Español</a
+              >
+            </div>
+          </div>
+
+          <div class="illustration">
+            <img
+              src="img/computer-worker-23.svg"
+              alt="Illustration of a woman sitting at a computer"
+            />
+          </div>
+        </section>
+      </div>
+
+      <div id="pixel-to-watch"></div>
+
+      <!-- Projects Section -->
+      <section class="container" id="projects">
+        <h2 class="numbered-heading" data-i18n="menuProjects">Projects</h2>
+
+        <div class="textured-bg" aria-hidden="true"></div>
+
+        <div class="projects-block">
+          <div class="project">
+            <div class="text">
+              <h3 data-i18n="projectSYAppTitle">StickerYou Sticker Editor</h3>
+              <span class="subtitle" data-i18n="projectSYAppSubtitle">
+                Sticker Design Application
+              </span>
+
+              <a
+                href="img/portfolio/stickeryou-app-lg.png"
+                class="img"
+                target="_blank"
+                data-fancybox
+                data-caption="StickerYou Custom Sticker Editor"
+              >
+                <img
+                  src="img/portfolio/stickeryou-app-sm.jpg"
+                  alt="StickerYou Custom Sticker Editor"
+                />
+              </a>
+
+              <div class="info">
+                <p data-i18n="SYAppP1">
+                  StickerYou tasked me with developing a front-end template for
+                  their custom sticker editor which would work for both desktop
+                  & mobile.
+                </p>
+                <p data-i18n="SYAppP2">
+                  Working closely with lead designer, I acted as the go between
+                  for the design & development teams, creating the entire user
+                  facing front-end which was then had it's functionality
+                  finalized by StickerYou's development team.
+                </p>
+                <p data-i18n="SYAppP3">
+                  I was responsible for developing a front-end which matched
+                  their design pixel for pixel and designing user interactions
+                  for the application.
+                </p>
+
+                <br />
+                <span class="tech">
+                  Bootstrap, HTML, SASS, Responsive Design, Mobile First, Sketch
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="text">
+              <h3 data-i18n="projectBLAppTitle">Bucketlist Rewards</h3>
+              <span class="subtitle" data-i18n="projectBLAppSubtitle">
+                Angular Application
+              </span>
+
+              <a
+                href="img/portfolio/bl-application-lg.png"
+                class="img"
+                target="_blank"
+                data-fancybox
+                data-caption="Bucketlist Rewards Angular Application"
+              >
+                <img
+                  src="img/portfolio/bl-application-sm.jpg"
+                  alt="Bucketlist Rewards Angular Application"
+                />
+              </a>
+
+              <div class="info">
+                <p data-i18n="projectBLAppP1">
+                  As front-end developer & themer at Bucketlist I worked within
+                  the dev team to develop an employee recognition & rewards
+                  software built with Angular on the Django platform.
+                </p>
+                <p data-i18n="projectBLAppP2">
+                  Bucketlist Rewards is a private social network for businesses
+                  to manage employee rewards through a point system which can be
+                  redeemed for real world experiences. I contributed to creating
+                  the front-end for features like the user's timeline, point
+                  leaderboard and events system.
+                </p>
+                <p data-i18n="projectBLAppP3">Software as a Service</p>
+
+                <span class="tech">
+                  Angular, Bootstrap, HTML, SASS, Git, Agile methodology.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="text">
+              <h3 data-i18n="projectSYSiteTitle">StickerYou</h3>
+              <span class="subtitle" data-i18n="projectSYSiteSubtitle">
+                Marketing Website
+              </span>
+
+              <a
+                href="img/portfolio/stickeryou-website-lg.png"
+                class="img"
+                target="_blank"
+                data-fancybox
+                data-caption="StickerYou Responsive Website"
+              >
+                <img
+                  src="img/portfolio/stickeryou-website-lg.png"
+                  alt="StickerYou Responsive Website"
+                />
+              </a>
+
+              <div class="info">
+                <p data-i18n="projectSYSiteP1">
+                  StickerYou's in-house dev team needed a front-end developer
+                  with an eye for design to aid in creating a front-end for
+                  their new responsive website. I used the Bootstrap CSS
+                  framework to template the front-end of the site thus matching
+                  the website to the design pixel by pixel.
+                </p>
+                <br />
+                <span class="tech">
+                  Bootstrap, HTML, SASS, Accessibility, SEO, Responsive Design
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <div class="text">
+              <h3 data-i18n="projectBMOSiteTitle">
+                Bank of Montreal Pharmacist Microsite
+              </h3>
+              <span class="subtitle" data-i18n="projectBMOSiteSubtitle">
+                Marketing Website
+              </span>
+
+              <a
+                href="img/portfolio/bmo-site-lg.png"
+                class="img"
+                target="_blank"
+                data-fancybox
+                data-caption="Bank of Montreal Pharmacist Microsite"
+              >
+                <img
+                  src="img/portfolio/bmo-site-sm.jpg"
+                  alt="Bank of Montreal Wordpress Site"
+                />
+              </a>
+
+              <div class="info">
+                <p data-i18n="projectBMOSiteP1">
+                  I created a lead generation site for Bank of Montreal while
+                  working at Forge Media + Design. I was the sole developer on
+                  the project, working closely with a designer to perfectly
+                  match BMO's brand guidelines.
+                </p>
+                <br />
+                <span class="tech"
+                  >WordPress, HTML, CSS, Accessibility, SEO</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resume / Experience -->
+      <section class="container" id="experience">
+        <h2 class="numbered-heading" data-i18n="menuExperience">Experience</h2>
+        <div class="flex">
+          <div class="text-block">
+            <p data-i18n="expP1">
+              I have nearly a decade of experience and have excelled in a range
+              of environments from being a jack-of-all-trades on a small
+              bootstrapping team to working with a design agency as a contractor
+              for one of the top 3 multinational technology companies in the
+              world. I've spent the past 4 years working as a remote contractor
+              for startups.
+            </p>
+
+            <p data-i18n="expP2">
+              I have a strong familiarity with front-end technologies and have
+              templated designs for use on Magento, .NET & Django applications.
+              This makes me familiar with theme development and the advantages
+              and setbacks of using a CMS. I've also worked with marketing teams
+              to design & develop e-mail marketing campaigns using platforms
+              like MailChimp & Hubspot.
+            </p>
+          </div>
+
+          <div class="text-block tech-stack">
+            <p data-i18n="expUL">
+              I've worked with the following softwares & technologies:
+            </p>
+
+            <ul>
+              <li>HTML (Advanced)</li>
+              <li>CSS (Advanced)</li>
+              <li>SASS (Advanced)</li>
+              <li>PHP</li>
+              <li>Javascript</li>
+              <li>React (Basic)</li>
+              <li>Angular (Basic)</li>
+            </ul>
+
+            <ul>
+              <li>Bootstrap</li>
+              <li>Wordpress</li>
+              <li>Git</li>
+              <li>Subversion</li>
+              <li>Photoshop (Advanced)</li>
+              <li>Sketch (Advanced)</li>
+              <li>Figma</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section - Text + Photo -->
+      <section class="container" id="about">
+        <div class="textured-bg" aria-hidden="true"></div>
+
+        <h2 class="numbered-heading" data-i18n="menuAbout">About Me</h2>
+        <div class="flex">
+          <div class="text-block">
+            <p data-i18n="greeting">Hello, my name is Pauline! &#128075;</p>
+            <p data-i18n="aboutP1">
+              I'm a bilingual [eng/esp] woman from Toronto, Canada who
+              immigrated to Spain in 2019. My passion for creating things online
+              started early, tinkering with HTML/CSS & learning graphic design
+              by creating things like a Star Trek fansite and 'Cheese Lovers'
+              web ring in the early 2000s. Fun!
+            </p>
+
+            <p data-i18n="aboutP2">
+              Growing up in a multi-cultural city like Toronto gave me a
+              curiosity for cultures & languages. I began learning Spanish in
+              2016 by travelling to South America and learning as I went. There
+              are some photos from my travels on my
+              <a href="https://www.instagram.com/paeli_/" target="_blank"
+                >Instagram</a
+              >.
+            </p>
+
+            <p data-i18n="aboutP3">
+              My hobbies include: &#127859; cooking, &#128247; photography,
+              &#127918; gaming and &#128170; lifting weights. I am always up for
+              a nice hike &#127748;, enjoying a fantasy novel &#128009; or
+              learning a new recipe &#127843;.
+            </p>
+
+            <div class="social-menu horizontal">
+              <div>
+                <a href="https://twitter.com/PKucharew" target="_blank">
+                  <i class="icon-social-twitter icons"></i> Twitter</a
+                >
+              </div>
+              <div>
+                <a href="https://www.linkedin.com/in/pkucharew/" target="_blank"
+                  ><i class="icon-social-linkedin icons"></i> LinkedIn</a
+                >
+              </div>
+              <div>
+                <a href="https://www.instagram.com/paeli_/" target="_blank"
+                  ><i class="icon-social-instagram icons"></i> Instagram</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="portrait">
+            <img src="img/pauline-photo.jpg" alt="Pauline Kucharew's Photo" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <section class="container">
+        <div class="text-block contact">
+          <h2 class="numbered-heading" data-i18n="contactHeading">
+            Get In Touch
+          </h2>
+          <p data-i18n="contactP">
+            I'm currently open to new opportunities, whether it's helping bring
+            an idea to fruition or collaborating as a part of a team on a long
+            term basis.
+          </p>
+          <a
+            href="mailto:pauline@kucharew.dev"
+            class="button contact"
+            data-i18n="[html]contactBtn"
+          >
+            Contact Me
+          </a>
+        </div>
+
+        <div class="language-toggle">
+          <span data-i18n="selectLang">Select language: </span>
+          <a href="#" lang="en" class="switch en" data-locale="en">English</a>
+          <a href="#" lang="es" class="switch es" data-locale="es">Español</a>
+        </div>
+
+        <div class="copyright" data-i18n="copyright">
+          <p>Copyright &copy; 2021, Pauline Kucharew. All rights reserved.</p>
+        </div>
+      </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>

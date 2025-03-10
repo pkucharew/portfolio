@@ -1,9 +1,9 @@
 {
   "greeting": "Hello, my name is Pauline!",
-  "heroTitle": "Front-end Developer & UI/UX Specialist",
-  "heroIntro": "I'm a front-end developer with an eye for design, specialized in building exceptional digital experiences. I'm currently looking for new projects to contribute to.",
+  "heroTitle": "Product Designer & UI/UX Specialist",
+  "heroIntro": "I'm a designer adept at problem-solving and proficient in prototyping and front-end development. Currently looking for a new role.",
   "contactBtn": "<i class='icon-envelope-letter icons'></i> Contact me",
-  "menuProjects": "Projects",
+  "menuProjects": "Dev Projects",
   "menuExperience": "Experience",
   "menuAbout": "About",
   "menuContact": "Contact",
